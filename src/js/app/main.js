@@ -55,7 +55,7 @@ export default class Main {
     //axes and grid
     var axes = new THREE.AxesHelper(100);
     this.scene.add(axes);
-    var gridXZ = new THREE.GridHelper(600, 599);
+    var gridXZ = new THREE.GridHelper(100, 99);
     this.scene.add(gridXZ);
 
     // Create and place lights in scene
@@ -66,9 +66,9 @@ export default class Main {
      * add terrain obj
      */
     // init terrain system
-    // var terrain = new Terrain(660,660);
-    // var box = terrain.build();
-    // this.scene.add(box); 
+    var terrain = new Terrain(660,660);
+    var box = terrain.build();
+    this.scene.add(box); 
 
     // Create and place geo in scene
     // this.geometry = new Geometry(this.scene);
@@ -139,7 +139,7 @@ export default class Main {
 
     // Call any vendor or module frame updates here
     TWEEN.update();
-    // this.controls.threeControls.update();
+    this.controls.threeControls.update();
 
     // RAF
     requestAnimationFrame(this.render.bind(this)); // Bind the main class instead of window object

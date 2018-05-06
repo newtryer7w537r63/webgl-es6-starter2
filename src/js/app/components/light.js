@@ -55,7 +55,7 @@ export default class Light {
 
       case 'directional':
         this.scene.add(this.directionalLight);
-        this.scene.add(this.directionalLightHelper);
+        // this.scene.add(this.directionalLightHelper);
         break;
 
       case 'point':

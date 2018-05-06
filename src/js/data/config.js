@@ -37,13 +37,13 @@ export default {
     near: 0.0008
   },
   camera: {
-    fov: 40,
-    near: 2,
+    fov: 75,
+    near: 0.1,
     far: 1000,
     aspect: 1,
     posX: 0,
     posY: 30,
-    posZ: 40
+    posZ: 10
   },
   controls: {
     autoRotate: true,
@@ -56,7 +56,7 @@ export default {
     maxPolarAngle: Math.PI / 2,
     minAzimuthAngle: -Infinity,
     maxAzimuthAngle: Infinity,
-    // enableDamping: true,
+    enableDamping: true,
     dampingFactor: 0.5,
     enableZoom: true,
     target: {
