@@ -8,6 +8,7 @@ import Renderer from './components/renderer';
 import Camera from './components/camera';
 import Light from './components/light';
 import Controls from './components/controls';
+import Terrain from './components/terrain';
 
 // Helpers
 import Geometry from './helpers/geometry';
@@ -32,7 +33,7 @@ export default class Main {
     this.container = container;
 
     // Start Three clock
-    this.clock = new THREE.Clock();
+    // this.clock = new THREE.Clock();
 
     // Main scene creation
     this.scene = new THREE.Scene();
@@ -51,20 +52,37 @@ export default class Main {
     this.controls = new Controls(this.camera.threeCamera, container);
     this.light = new Light(this.scene);
 
+    //axes and grid
+    var axes = new THREE.AxesHelper(100);
+    this.scene.add(axes);
+    var gridXZ = new THREE.GridHelper(600, 599);
+    this.scene.add(gridXZ);
+
     // Create and place lights in scene
     const lights = ['ambient', 'directional', 'point', 'hemi'];
     lights.forEach((light) => this.light.place(light));
 
+    /**
+     * add terrain obj
+     */
+    // init terrain system
+    // var terrain = new Terrain(660,660);
+    // var box = terrain.build();
+    // this.scene.add(box); 
+
     // Create and place geo in scene
-    this.geometry = new Geometry(this.scene);
-    this.geometry.make('plane')(150, 150, 10, 10);
-    this.geometry.place([0, -20, 0], [Math.PI / 2, 0, 0]);
+    // this.geometry = new Geometry(this.scene);
+    // this.geometry.make('plane')(150, 150, 10, 10);
+    // this.geometry.place([0, -20, 0], [Math.PI / 2, 0, 0]);
 
     // Set up rStats if dev environment
-    if(Config.isDev && Config.isShowingStats) {
-      this.stats = new Stats(this.renderer);
-      this.stats.setUp();
-    }
+    /**
+     * this is the stats GUI 
+     */
+    // if(Config.isDev && Config.isShowingStats) {
+    //   this.stats = new Stats(this.renderer);
+    //   this.stats.setUp();
+    // }
 
     // Instantiate texture class
     this.texture = new Texture();
@@ -104,24 +122,24 @@ export default class Main {
 
   render() {
     // Render rStats if Dev
-    if(Config.isDev && Config.isShowingStats) {
-      Stats.start();
-    }
+    // if(Config.isDev && Config.isShowingStats) {
+    //   Stats.start();
+    // }
 
     // Call render function and pass in created scene and camera
     this.renderer.render(this.scene, this.camera.threeCamera);
 
     // rStats has finished determining render call now
-    if(Config.isDev && Config.isShowingStats) {
-      Stats.end();
-    }
+    // if(Config.isDev && Config.isShowingStats) {
+    //   Stats.end();
+    // }
 
     // Delta time is sometimes needed for certain updates
     //const delta = this.clock.getDelta();
 
     // Call any vendor or module frame updates here
     TWEEN.update();
-    this.controls.threeControls.update();
+    // this.controls.threeControls.update();
 
     // RAF
     requestAnimationFrame(this.render.bind(this)); // Bind the main class instead of window object

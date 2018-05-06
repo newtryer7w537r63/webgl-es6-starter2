@@ -20,7 +20,7 @@ export default {
   texture: {
     path: './assets/textures/',
     imageFiles: [
-      {name: 'UV', image: 'UV_Grid_Sm.jpg'}
+      {name: 'UV', image: 'UV_Grid_Sm.png'}
     ]
   },
   mesh: {
@@ -47,16 +47,16 @@ export default {
   },
   controls: {
     autoRotate: true,
-    autoRotateSpeed: -0.5,
+    autoRotateSpeed: 0,
     rotateSpeed: 0.5,
     zoomSpeed: 0.8,
     minDistance: 200,
-    maxDistance: 600,
+    maxDistance: 1600,
     minPolarAngle: Math.PI / 5,
     maxPolarAngle: Math.PI / 2,
     minAzimuthAngle: -Infinity,
     maxAzimuthAngle: Infinity,
-    enableDamping: true,
+    // enableDamping: true,
     dampingFactor: 0.5,
     enableZoom: true,
     target: {

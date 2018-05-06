@@ -15,8 +15,8 @@ export default class Controls {
 
   init() {
     this.threeControls.target.set(Config.controls.target.x, Config.controls.target.y, Config.controls.target.z);
-    // this.threeControls.autoRotate = Config.controls.autoRotate;
-    // this.threeControls.autoRotateSpeed = Config.controls.autoRotateSpeed;
+    this.threeControls.autoRotate = Config.controls.autoRotate;
+    this.threeControls.autoRotateSpeed = Config.controls.autoRotateSpeed;
     this.threeControls.rotateSpeed = Config.controls.rotateSpeed;
     this.threeControls.zoomSpeed = Config.controls.zoomSpeed;
     this.threeControls.minDistance = Config.controls.minDistance;
