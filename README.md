@@ -1,6 +1,6 @@
 # Three.js Webpack ES6 Boilerplate
 
-![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo.png)
+![alt text](https://github.com/MemoryWrong/webgl-demo/blob/master/src/assets/demo.png)
 
 
 ## Project Structure
