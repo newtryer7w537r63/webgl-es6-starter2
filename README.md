@@ -1,7 +1,7 @@
 # Three.js Webpack ES6 Boilerplate
 
 ### Content
-![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo.png)
+![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo1.png)
 
 ```
 1. webgl THREE.js terrian features 
