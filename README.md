@@ -1,8 +1,13 @@
 # Three.js Webpack ES6 Boilerplate
 
-![alt text](https://github.com/MemoryWrong/webgl-demo/blob/master/src/assets/demo.png)
+![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo.png)
+
+```
+1. webgl THREE.js terrian features 
+2. particle system demo (need to modify the code)
 
 
+```
 ## Project Structure
 * build - Directory for built and compressed files from the npm build script
 * src - Directory for all dev files
