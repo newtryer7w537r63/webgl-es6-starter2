@@ -1,6 +1,6 @@
 # Three.js Webpack ES6 Boilerplate
 A basic boilerplate for a Three.js project including the use of Webpack and ES6 syntax via Babel.
-
+![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo.png)
 ## Project Structure
 * build - Directory for built and compressed files from the npm build script
 * src - Directory for all dev files
