@@ -1,5 +1,6 @@
 # Three.js Webpack ES6 Boilerplate
 
+### Content
 ![alt text](https://github.com/MemoryWrong/webgl-experiment/tree/master/src/public/assets/img/demo.png)
 
 ```
