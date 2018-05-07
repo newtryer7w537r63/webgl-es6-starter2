@@ -14,13 +14,16 @@ export default {
   easing: TWEEN.Easing.Quadratic.InOut,
   duration: 500,
   model: {
-    path: './assets/models/female.json',
-    scale: 10
+    // path: './assets/models/female.json',
+    path: './assets/models/T-90.obj',
+    // path: './assets/models/bunny.obj',
+    scale: 1
   },
   texture: {
     path: './assets/textures/',
     imageFiles: [
-      {name: 'UV', image: 'UV_Grid_Sm.png'}
+      // {name: 'UV', image: 'UV_Grid_Sm.png'}
+      // {name: 'UV', image: 'UV_Grid_Sm.png'}
     ]
   },
   mesh: {
@@ -50,7 +53,7 @@ export default {
     autoRotateSpeed: 0,
     rotateSpeed: 0.5,
     zoomSpeed: 0.8,
-    minDistance: 200,
+    minDistance: 10,
     maxDistance: 1600,
     minPolarAngle: Math.PI / 5,
     maxPolarAngle: Math.PI / 2,

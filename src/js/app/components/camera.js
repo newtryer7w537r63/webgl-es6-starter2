@@ -8,6 +8,8 @@ export default class Camera {
     const width = renderer.domElement.width;
     const height = renderer.domElement.height;
 
+    // this.camera = new THREE.PerspectiveCamera( 75, width/height, 0.1, 1000 );
+    
     // Create and position a Perspective Camera
     this.threeCamera = new THREE.PerspectiveCamera(Config.camera.fov, width / height, Config.camera.near, Config.camera.far);
     this.threeCamera.position.set(Config.camera.posX, Config.camera.posY, Config.camera.posZ);

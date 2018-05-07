@@ -1,6 +1,8 @@
 // Global imports -
 import * as THREE from 'three';
+import * as OBJLoader from 'three-obj-loader';
 import TWEEN from 'tween.js';
+import ObjMtlLoader from 'obj-mtl-loader';
 
 // Local imports -
 // Components
@@ -66,9 +68,9 @@ export default class Main {
      * add terrain obj
      */
     // init terrain system
-    var terrain = new Terrain(660,660);
-    var box = terrain.build();
-    this.scene.add(box); 
+    // var terrain = new Terrain(660,660);
+    // var box = terrain.build();
+    // this.scene.add(box); 
 
     // Create and place geo in scene
     // this.geometry = new Geometry(this.scene);
@@ -84,13 +86,14 @@ export default class Main {
     //   this.stats.setUp();
     // }
 
+    
     // Instantiate texture class
     this.texture = new Texture();
 
     // Start loading the textures and then go on to load the model after the texture Promises have resolved
     this.texture.load().then(() => {
       this.manager = new THREE.LoadingManager();
-
+      
       // Textures loaded, load model
       this.model = new Model(this.scene, this.manager, this.texture.textures);
       this.model.load();
@@ -106,9 +109,9 @@ export default class Main {
         new Interaction(this.renderer.threeRenderer, this.scene, this.camera.threeCamera, this.controls.threeControls);
 
         // Add dat.GUI controls if dev
-        if(Config.isDev) {
-          new DatGUI(this, this.model.obj);
-        }
+        // if(Config.isDev) {
+        //   new DatGUI(this, this.model.obj);
+        // }
 
         // Everything is now fully loaded
         Config.isLoaded = true;
